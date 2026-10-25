@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maruthi Bike Rentals | Affordable Scooter Rentals in Maisammaguda & Bahadurpally</title>
+<meta name="description" content="Rent affordable scooters near Maisammaguda and Bahadurpally, Hyderabad. Student-friendly pricing, easy WhatsApp booking and convenient rental durations with Maruthi Bike Rentals.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0A1F3D;
+    --navy-mid:#12294D;
+    --navy-line:#1F3D66;
+    --gold:#F4A81D;
+    --gold-light:#FFD874;
+    --cream:#FBF9F4;
+    --ink:#10182B;
+    --ink-soft:#4A5468;
+    --white:#FFFFFF;
+    --shadow: 0 20px 50px -20px rgba(10,31,61,0.35);
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.display{
+    font-family:'Bricolage Grotesque', sans-serif;
+    letter-spacing:-0.02em;
+  }
+  .mono{font-family:'IBM Plex Mono', monospace;}
+  a{text-decoration:none; color:inherit;}
+  ul{list-style:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:1180px; margin:0 auto; padding:0 24px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    letter-spacing:0.18em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:600;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:18px; height:2px;
+    background:var(--gold);
+    display:inline-block;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    padding:15px 28px;
+    border-radius:12px;
+    font-weight:700;
+    font-size:15px;
+    cursor:pointer;
+    border:none;
+    transition:transform .18s ease, box-shadow .18s ease, background .18s ease;
+    white-space:nowrap;
+  }
+  .btn-gold{
+    background:var(--gold);
+    color:var(--navy-deep);
+    box-shadow:0 12px 24px -10px rgba(244,168,29,0.6);
+  }
+  .btn-gold:hover{ transform:translateY(-2px); box-shadow:0 16px 30px -10px rgba(244,168,29,0.75); }
+  .btn-outline{
+    background:transparent;
+    border:1.5px solid rgba(255,255,255,0.35);
+    color:var(--white);
+  }
+  .btn-outline:hover{ background:rgba(255,255,255,0.08); transform:translateY(-2px); }
+  .btn-navy{
+    background:var(--navy-deep);
+    color:var(--white);
+  }
+  .btn-navy:hover{ transform:translateY(-2px); background:var(--navy-mid); }
+  .btn-whatsapp{
+    background:#25D366; color:#fff;
+  }
+  .btn-whatsapp:hover{ transform:translateY(-2px); box-shadow:0 14px 26px -10px rgba(37,211,102,.55); }
+
+  /* ===== HEADER ===== */
+  header{
+    position:sticky; top:0; z-index:200;
+    background:rgba(10,31,61,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.08);
+  }
+  .nav{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:18px 2px; max-width:1180px; margin:0 auto;gap:30px;
+  }
+  .logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color:var(--white);
+  font-family:'Bricolage Grotesque', sans-serif;
+  font-weight:800;
+  font-size:19px;
+  letter-spacing:-0.01em;
+}
+
+.logo img{
+  width:130px;
+  height:130px;
+  object-fit:contain;
+  border-radius:50%;
+  display:block;
+}
+
+.logo span{
+  white-space:nowrap;
+}  .nav-links{
+    display:flex; align-items:center; gap:30px;
+  }
+  .nav-links a{
+    color:rgba(255,255,255,0.82);
+    font-size:14.5px; font-weight:500;
+    transition:color .15s ease;
+    position:relative;
+  }
+  .nav-links a:hover{ color:var(--gold-light); }
+  .nav-right{ display:flex; align-items:center; gap:16px; }
+  .phone-link{
+    color:var(--white); font-weight:600; font-size:14.5px;
+    display:flex; align-items:center; gap:7px;
+  }
+  .hamburger{ display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; }
+  .hamburger span{ width:24px; height:2px; background:var(--white); border-radius:2px; }
+  .mobile-menu{
+    display:none; flex-direction:column; gap:2px;
+    background:var(--navy-mid); padding:10px 24px 20px;
+  }
+  .mobile-menu a{ color:rgba(255,255,255,0.85); padding:12px 0; font-weight:500; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .mobile-menu.open{ display:flex; }
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    background:radial-gradient(circle at 85% 20%, #16335c 0%, var(--navy-deep) 55%);
+    padding:90px 0 170px;
+    overflow:hidden;
+  }
+  .route-line-bg{
+    position:absolute; inset:0; opacity:0.5; pointer-events:none;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.1fr 0.9fr; gap:40px; align-items:center;
+    position:relative; z-index:2;
+  }
+  .hero-copy .trust-pill{
+    display:inline-flex; align-items:center; gap:10px;
+    background:rgba(255,255,255,0.07);
+    border:1px solid rgba(255,255,255,0.14);
+    padding:8px 16px; border-radius:100px;
+    color:var(--gold-light); font-size:13px; font-weight:600;
+    margin-bottom:24px;
+  }
+  .hero h1{
+    color:var(--white);
+    font-size:clamp(40px, 5.6vw, 68px);
+    line-height:1.02;
+    font-weight:800;
+    margin:14px 0 20px;
+  }
+  .hero h1 .accent{ color:var(--gold); }
+  .hero p.sub{
+    color:rgba(255,255,255,0.72);
+    font-size:18px; line-height:1.55;
+    max-width:480px;
+    margin-bottom:34px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; }
+
+  .hero-art{
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .scooter-badge-ring{
+    position:absolute;
+    width:100%; max-width:420px; aspect-ratio:1;
+    border:1.5px dashed rgba(244,168,29,0.35);
+    border-radius:50%;
+    animation:spin 40s linear infinite;
+  }
+  @keyframes spin{ to{ transform:rotate(360deg); } }
+  .stat-chip{
+    position:absolute;
+    background:var(--white);
+    border-radius:14px;
+    padding:12px 16px;
+    box-shadow:var(--shadow);
+    display:flex; align-items:center; gap:10px;
+  }
+  .stat-chip .num{ font-family:'IBM Plex Mono'; font-weight:600; font-size:18px; color:var(--navy-deep); }
+  .stat-chip .lbl{ font-size:11px; color:var(--ink-soft); }
+  .stat-chip.chip1{ top:6%; left:-4%; }
+  .stat-chip.chip2{ bottom:10%; right:-6%; }
+
+  /* ===== BOOKING BAR ===== */
+  .booking-bar{
+    max-width:1080px; margin:-90px auto 0; position:relative; z-index:10;
+    background:var(--white);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    padding:10px;
+    display:grid;
+    grid-template-columns:1.1fr 1fr 1fr 1fr 1fr 1.2fr;
+    gap:2px;
+  }
+  .bfield{
+    padding:14px 18px;
+    border-right:1px solid #eef0f4;
+  }
+  .bfield:last-child{ border-right:none; }
+  .bfield label{
+    display:block; font-size:11px; font-weight:600; color:var(--ink-soft);
+    text-transform:uppercase; letter-spacing:0.05em; margin-bottom:4px;
+  }
+  .bfield input{
+    border:none; outline:none; font-family:'Inter'; font-size:14.5px; font-weight:600;
+    width:100%; color:var(--ink); background:transparent;
+  }
+  .bfield.cta-cell{ display:flex; align-items:stretch; padding:6px; }
+  .bfield.cta-cell .btn{ width:100%; border-radius:14px; }
+
+  /* ===== SECTION SHARED ===== */
+  section{ padding:100px 0; }
+  .section-head{ max-width:640px; margin-bottom:56px; }
+  .section-head h2{ font-size:clamp(30px,3.6vw,44px); font-weight:800; margin-top:12px; }
+  .section-head p{ color:var(--ink-soft); font-size:16.5px; margin-top:14px; line-height:1.6; }
+  .center{ text-align:center; margin-left:auto; margin-right:auto; }
+
+  /* ===== TRUST ===== */
+  .trust-grid{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:20px;
+  }
+  .trust-card{
+    background:var(--white);
+    border-radius:18px;
+    padding:30px 24px;
+    border:1px solid #eef0f4;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .trust-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .trust-card .icon{
+    width:46px; height:46px; border-radius:12px; background:#FFF3DE;
+    display:flex; align-items:center; justify-content:center; margin-bottom:16px;
+  }
+  .trust-card h3{ font-size:17px; margin-bottom:6px; }
+  .trust-card p{ font-size:14px; color:var(--ink-soft); line-height:1.5; }
+
+  /* ===== SCOOTERS ===== */
+  .scooters{ background:var(--navy-deep); color:var(--white); }
+  .scooters .section-head p{ color:rgba(255,255,255,0.65); }
+  .scooter-grid{ display:grid; grid-template-columns:1fr 1fr; gap:26px; }
+  .scooter-card{
+    background:var(--navy-mid);
+    border-radius:22px;
+    padding:34px;
+    border:1px solid rgba(255,255,255,0.08);
+    position:relative;
+    overflow:hidden;
+  }
+  .scooter-card .tag{
+    position:absolute; top:24px; right:24px;
+    background:rgba(244,168,29,0.15); color:var(--gold-light);
+    font-size:11px; font-weight:700; padding:6px 12px; border-radius:100px;
+    text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .scooter-illustration{ margin:10px 0 22px; }
+  .scooter-card h3{ font-size:24px; margin-bottom:8px; }
+  .scooter-card p{ color:rgba(255,255,255,0.62); font-size:14.5px; margin-bottom:24px; line-height:1.55; }
+
+  /* ===== PRICING ===== */
+  .pricing-grid{ display:grid; grid-template-columns:repeat(4,1fr); gap:20px; }
+  .price-card{
+    background:var(--white);
+    border-radius:20px;
+    padding:30px 26px;
+    border:1.5px solid #eef0f4;
+    position:relative;
+    display:flex; flex-direction:column;
+    transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+  }
+  .price-card:hover{ transform:translateY(-6px); box-shadow:var(--shadow); }
+  .price-card.popular{
+    border-color:var(--gold);
+    background:linear-gradient(180deg, #FFFBF1 0%, #ffffff 40%);
+  }
+  .popular-badge{
+    position:absolute; top:-13px; left:26px;
+    background:var(--gold); color:var(--navy-deep);
+    font-size:11px; font-weight:700; padding:6px 14px; border-radius:100px;
+    text-transform:uppercase; letter-spacing:0.04em;
+  }
+  .price-card .duration{ font-size:13px; font-weight:600; color:var(--ink-soft); text-transform:uppercase; letter-spacing:0.05em; margin-bottom:10px; }
+  .price-card .amount{ font-family:'IBM Plex Mono'; font-size:38px; font-weight:600; color:var(--navy-deep); margin-bottom:6px; }
+  .price-card .amount span{ font-size:15px; font-weight:500; color:var(--ink-soft); }
+  .price-card .desc{ font-size:13.5px; color:var(--ink-soft); margin-bottom:26px; line-height:1.5; flex-grow:1; }
+  .price-card .btn{ width:100%; }
+  .rate-note{
+    margin-top:24px; text-align:center; color:var(--ink-soft); font-size:14px;
+  }
+  .rate-note .mono{ color:var(--navy-deep); font-weight:600; }
+
+  /* ===== STUDENT SPECIAL ===== */
+  .student-special{
+    background:var(--gold);
+    border-radius:32px;
+    margin:0 24px;
+    padding:70px 60px;
+    position:relative;
+    overflow:hidden;
+  }
+  .student-special::before{
+    content:"";
+    position:absolute; right:-60px; top:-60px;
+    width:280px; height:280px; border-radius:50%;
+    border:1.5px dashed rgba(10,31,61,0.25);
+  }
+  .student-special h2{
+    font-size:clamp(28px,4vw,42px); color:var(--navy-deep); max-width:600px; font-weight:800; margin-bottom:18px;
+  }
+  .student-special p{ color:#3a2c0c; font-size:16.5px; max-width:560px; line-height:1.6; margin-bottom:22px; }
+  .tag-row{ display:flex; flex-wrap:wrap; gap:10px; margin-bottom:30px; }
+  .tag-pill{
+    background:rgba(10,31,61,0.08);
+    color:var(--navy-deep);
+    font-size:13px; font-weight:600;
+    padding:8px 14px; border-radius:100px;
+  }
+
+  /* ===== ABOUT ===== */
+  .about-grid{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:60px; align-items:center; }
+  .about-stat{
+    background:var(--navy-deep); color:var(--white);
+    border-radius:22px; padding:40px;
+    display:flex; flex-direction:column; align-items:flex-start; gap:6px;
+  }
+  .about-stat .big{ font-family:'IBM Plex Mono'; font-size:52px; font-weight:600; color:var(--gold); }
+  .about-stat .lbl{ font-size:14.5px; color:rgba(255,255,255,0.7); }
+  .about-copy p{ font-size:17px; line-height:1.7; color:var(--ink-soft); margin-bottom:18px; }
+  .about-copy .lead{ font-size:20px; font-weight:600; color:var(--ink); }
+
+  /* ===== HOW IT WORKS — signature route line ===== */
+  .route-wrap{ position:relative; }
+  .route-line{
+    position:absolute; left:0; right:0; top:44px;
+    height:2px;
+    background-image:linear-gradient(90deg, var(--navy-line) 0 10px, transparent 10px 20px);
+    background-size:20px 2px;
+  }
+  .route-marker{
+    position:absolute; top:30px; left:0;
+    width:30px; height:30px;
+    animation:travel 6s linear infinite;
+  }
+  @keyframes travel{
+    0%{ left:2%; } 100%{ left:82%; }
+  }
+  .route-steps{
+    display:grid; grid-template-columns:repeat(4,1fr); gap:26px;
+    position:relative; z-index:2;
+  }
+  .route-step .stop{
+    width:52px; height:52px; border-radius:50%;
+    background:var(--navy-deep); color:var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-family:'IBM Plex Mono'; font-weight:600; font-size:15px;
+    margin-bottom:22px;
+    border:5px solid var(--cream);
+  }
+  .route-step h3{ font-size:18px; margin-bottom:8px; }
+  .route-step p{ font-size:14px; color:var(--ink-soft); line-height:1.55; }
+
+  /* ===== WHY US ===== */
+  .why-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:#eef0f4; border-radius:20px; overflow:hidden; }
+  .why-item{
+    background:var(--white); padding:32px 28px; display:flex; gap:14px; align-items:flex-start;
+  }
+  .why-item .check{
+    width:26px; height:26px; border-radius:50%; background:#E9F9EE; color:#1FA34A;
+    display:flex; align-items:center; justify-content:center; flex-shrink:0; font-size:13px; font-weight:700;
+  }
+  .why-item p{ font-size:15px; font-weight:600; line-height:1.4; }
+
+  /* ===== LOCATION ===== */
+  .location-section{ background:var(--navy-deep); color:var(--white); }
+  .location-grid{ display:grid; grid-template-columns:1fr 1fr; gap:40px; align-items:center; }
+  .location-copy .addr{ font-size:20px; font-weight:700; margin:18px 0 26px; display:flex; align-items:center; gap:10px; }
+  .map-card{
+    background:var(--navy-mid); border-radius:22px; height:320px;
+    display:flex; align-items:center; justify-content:center;
+    border:1px dashed rgba(255,255,255,0.2);
+    position:relative; overflow:hidden;
+  }
+  .map-card .pin{
+    display:flex; flex-direction:column; align-items:center; gap:10px;
+    color:rgba(255,255,255,0.8);
+  }
+  .map-card .pin-dot{
+    width:18px; height:18px; border-radius:50%; background:var(--gold);
+    box-shadow:0 0 0 8px rgba(244,168,29,0.18);
+  }
+
+  /* ===== CONTACT ===== */
+  .contact-cta{
+    background:linear-gradient(135deg, var(--navy-deep), #16335c);
+    border-radius:32px; margin:0 24px; padding:80px 60px; text-align:center; color:var(--white);
+  }
+  .contact-cta h2{ font-size:clamp(30px,4.4vw,48px); font-weight:800; margin-bottom:14px; }
+  .contact-cta p{ color:rgba(255,255,255,0.7); font-size:17px; margin-bottom:34px; }
+  .contact-ctas{ display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+  .contact-phone{ margin-top:28px; font-family:'IBM Plex Mono'; font-size:15px; color:rgba(255,255,255,0.6); }
+
+  /* ===== FOOTER ===== */
+  footer{ background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:60px 0 30px; }
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:40px; padding-bottom:40px; border-bottom:1px solid rgba(255,255,255,0.08); }
+  .footer-logo{ color:var(--white); font-family:'Bricolage Grotesque'; font-weight:800; font-size:20px; margin-bottom:10px; }
+  .footer-tag{ font-size:14.5px; max-width:260px; line-height:1.5; }
+  .footer-col h4{ color:var(--white); font-size:14px; margin-bottom:16px; }
+  .footer-col a{ display:block; font-size:14px; padding:6px 0; transition:color .15s; }
+  .footer-col a:hover{ color:var(--gold-light); }
+  .footer-bottom{ padding-top:24px; font-size:13px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+
+  /* ===== WHATSAPP FLOAT ===== */
+  .wa-float{
+    position:fixed; bottom:26px; right:26px; z-index:300;
+    width:60px; height:60px; border-radius:50%;
+    background:#25D366; display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(37,211,102,0.6);
+    cursor:pointer;
+  }
+  .wa-float:hover .wa-tooltip{ opacity:1; transform:translateX(0); }
+  .wa-tooltip{
+    position:absolute; right:74px; top:50%; transform:translateY(-50%) translateX(10px);
+    background:var(--navy-deep); color:var(--white); padding:8px 14px; border-radius:8px;
+    font-size:13px; font-weight:600; white-space:nowrap; opacity:0; transition:all .2s ease;
+  }
+
+  /* ===== RESPONSIVE ===== */
+  @media (max-width:900px){
+    .nav-links{ display:none; }
+    .hamburger{ display:flex; }
+    .hero-grid{ grid-template-columns:1fr; }
+    .hero-art{ display:none; }
+    .booking-bar{ grid-template-columns:1fr 1fr; margin-top:-40px; border-radius:18px; }
+    .bfield{ border-right:none; border-bottom:1px solid #eef0f4; }
+    .bfield.cta-cell{ grid-column:1/-1; }
+    .trust-grid, .scooter-grid, .pricing-grid, .route-steps, .why-grid{ grid-template-columns:1fr 1fr; }
+    .about-grid, .location-grid{ grid-template-columns:1fr; }
+    .route-line, .route-marker{ display:none; }
+    .student-special, .contact-cta{ margin:0 16px; padding:50px 28px; }
+    section{ padding:70px 0; }
+    .why-grid{ grid-template-columns:1fr; }
+  }
+  @media (max-width:560px){
+    .trust-grid, .scooter-grid, .pricing-grid, .route-steps{ grid-template-columns:1fr; }
+    .booking-bar{ grid-template-columns:1fr; }
+    .hero{ padding:60px 0 60px; }
+    .booking-bar{ margin-top:24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="nav">
+    <a href="#top" class="logo">
+  <img src="file:///D:/rentals/5439c03e-217e-412c-abfb-60438decb5e1.png"
+       alt="Maruthi Bike Rentals Logo">
+  <span>MARUTHI BIKE RENTALS</span>
+</a>
+    <nav class="nav-links">
+      <a href="#top">Home</a>
+      <a href="#scooters">Our Scooters</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#about">About Us</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-right">
+      <a href="tel:7780208135" class="phone-link">📞 7780208135</a>
+      <a class="btn btn-gold" id="waTopBtn" target="_blank" rel="noopener">WhatsApp Us</a>
+      <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#top">Home</a>
+    <a href="#scooters">Our Scooters</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#about">About Us</a>
+    <a href="#how">How It Works</a>
+    <a href="#contact">Contact</a>
+    <a href="tel:7780208135">📞 7780208135</a>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="top" style="padding-bottom:0;">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <div class="trust-pill">⭐ 500+ Students Have Already Rented With Us</div>
+        <h1>Ride Hyderabad <span class="accent">Your Way</span></h1>
+        <p class="sub">Affordable scooters. Easy booking. Freedom to ride. Reliable and affordable rentals near Maisammaguda &amp; Bahadurpally — perfect for students.</p><br><br>
+        <div class="hero-ctas">
+          <a href="#pricing" class="btn btn-gold">Book Your Scooter</a>
+          <a class="btn btn-outline wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a scooter. Please share the available scooters and pricing.">WhatsApp Us</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="scooter-badge-ring"></div>
+        <svg width="340" height="340" viewBox="0 0 340 340" fill="none">
+          <circle cx="170" cy="170" r="150" fill="#12294D"/>
+          <g transform="translate(58,110)">
+            <ellipse cx="112" cy="146" rx="118" ry="10" fill="#0A1F3D"/>
+            <circle cx="34" cy="132" r="30" stroke="#F4A81D" stroke-width="7"/>
+            <circle cx="180" cy="132" r="30" stroke="#F4A81D" stroke-width="7"/>
+            <path d="M34 132 L100 60 L150 60 L180 132" stroke="#FBF9F4" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M100 60 L100 30 L130 26" stroke="#FBF9F4" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <rect x="120" y="18" width="30" height="10" rx="5" fill="#F4A81D"/>
+            <path d="M150 60 C 175 60 190 78 190 100 L 165 100" stroke="#FBF9F4" stroke-width="8" stroke-linecap="round" fill="none"/>
+            <circle cx="55" cy="104" r="9" fill="#F4A81D"/>
+          </g>
+        </svg>
+        <div class="stat-chip chip1">
+          <div class="num">4.9★</div>
+          <div class="lbl">Rider Rating</div>
+        </div>
+        <div class="stat-chip chip2">
+          <div class="num">₹50/hr</div>
+          <div class="lbl">Starting Price</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK BOOKING BAR -->
+  <div class="wrap">
+    <div class="booking-bar">
+      <div class="bfield">
+        <label>📍 Location</label>
+        <input type="text" value="Maisammaguda / Bahadurpally" readonly>
+      </div>
+      <div class="bfield">
+        <label>📅 Pick-up Date</label>
+        <input type="date">
+      </div>
+      <div class="bfield">
+        <label>🕐 Start Time</label>
+        <input type="time">
+      </div>
+      <div class="bfield">
+        <label>📅 Return Date</label>
+        <input type="date">
+      </div>
+      <div class="bfield">
+        <label>🕐 Return Time</label>
+        <input type="time">
+      </div>
+      <div class="bfield cta-cell">
+        <a class="btn btn-gold wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to check scooter availability. Please share pricing and options.">Check Availability</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TRUST SECTION ===== -->
+<section id="trust">
+  <div class="wrap">
+    <div class="trust-grid">
+      <div class="trust-card">
+        <div class="icon">🎓</div>
+        <h3>500+ Students</h3>
+        <p>Trusted by more than 500 students across Hyderabad.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">💸</div>
+        <h3>Affordable Pricing</h3>
+        <p>Student-friendly rental prices that fit any budget.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">💬</div>
+        <h3>Easy Booking</h3>
+        <p>Book directly through WhatsApp in under a minute.</p>
+      </div>
+      <div class="trust-card">
+        <div class="icon">📍</div>
+        <h3>Convenient Location</h3>
+        <p>Located near Maisammaguda &amp; Bahadurpally.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== OUR SCOOTERS ===== -->
+<section class="scooters" id="scooters">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Our Fleet</span>
+      <h2>Our Scooters</h2>
+      <p>Choose your ride and hit the road.</p>
+    </div>
+    <div class="scooter-grid">
+      <div class="scooter-card">
+        <span class="tag">Best for daily use</span>
+        <div class="scooter-illustration">
+          <svg width="220" height="100" viewBox="0 0 220 100" fill="none">
+            <circle cx="46" cy="76" r="20" stroke="#F4A81D" stroke-width="6"/>
+            <circle cx="160" cy="76" r="20" stroke="#F4A81D" stroke-width="6"/>
+            <path d="M46 76 L95 30 L135 30 L160 76" stroke="#FBF9F4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M95 30 L95 8 L120 4" stroke="#FBF9F4" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <path d="M135 30 C 158 30 172 46 172 66 L 148 66" stroke="#FBF9F4" stroke-width="7" stroke-linecap="round" fill="none"/>
+          </svg>
+        </div>
+        <h3>Honda Activa</h3>
+        <p>Reliable, comfortable and perfect for daily travel around campus and the city.</p>
+        <a class="btn btn-gold wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a Honda Activa. Please share availability and pricing.">Book Activa</a>
+      </div>
+      <div class="scooter-card">
+        <span class="tag">Fuel efficient</span>
+        <div class="scooter-illustration">
+          <svg width="220" height="100" viewBox="0 0 220 100" fill="none">
+            <circle cx="46" cy="76" r="20" stroke="#F4A81D" stroke-width="6"/>
+            <circle cx="160" cy="76" r="20" stroke="#F4A81D" stroke-width="6"/>
+            <path d="M46 76 L90 34 L145 34 L160 76" stroke="#FBF9F4" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <path d="M90 34 L90 10 L112 6" stroke="#FBF9F4" stroke-width="7" stroke-linecap="round" fill="none"/>
+            <rect x="120" y="22" width="30" height="10" rx="5" fill="#F4A81D"/>
+          </svg>
+        </div>
+        <h3>Yamaha Fascino</h3>
+        <p>Stylish, lightweight and fuel efficient — great for quick hops around town.</p>
+        <a class="btn btn-gold wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a Yamaha Fascino. Please share availability and pricing.">Book Fascino</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== PRICING ===== -->
+<section id="pricing">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">Pricing</span>
+      <h2>Simple &amp; Affordable Pricing</h2>
+      <p>No hidden fees. Pick a duration that fits your day.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="duration">4 Hours</div>
+        <div class="amount">₹200</div>
+        <div class="desc">Perfect for a quick errand or a few college lectures.</div>
+        <a class="btn btn-navy wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a scooter for 4 hours (₹200). Please share availability.">Book Now</a>
+      </div>
+      <div class="price-card popular">
+        <span class="popular-badge">Most Popular</span>
+        <div class="duration">6 Hours</div>
+        <div class="amount">₹300</div>
+        <div class="desc">A full college day, sorted — go anywhere and back.</div>
+        <a class="btn btn-gold wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a scooter for 6 hours (₹300). Please share availability.">Book Now</a>
+      </div>
+      <div class="price-card">
+        <div class="duration">12 Hours</div>
+        <div class="amount">₹450</div>
+        <div class="desc">For long errands, weekend plans or a half-day trip.</div>
+        <a class="btn btn-navy wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a scooter for 12 hours (₹450). Please share availability.">Book Now</a>
+      </div>
+      <div class="price-card">
+        <div class="duration">24 Hours</div>
+        <div class="amount">₹600</div>
+        <div class="desc">A full day on your own schedule — explore Hyderabad.</div>
+        <a class="btn btn-navy wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I want to book a scooter for 24 hours (₹600). Please share availability.">Book Now</a>
+      </div>
+    </div>
+    <div class="rate-note">Prefer hourly? Rentals also available at <span class="mono">₹50 / hour</span>.</div>
+  </div>
+</section>
+
+<!-- ===== STUDENT SPECIAL ===== -->
+<section style="padding-top:0;">
+  <div class="student-special">
+    <span class="eyebrow" style="color:#0A1F3D;">For Students</span>
+    <h2>Your Campus. Your Ride. Your Freedom.</h2>
+    <p>No waiting for buses. No depending on autos. Get a scooter and move around Hyderabad on your own schedule.</p>
+    <div class="tag-row">
+      <span class="tag-pill">College commute</span>
+      <span class="tag-pill">Hostel travel</span>
+      <span class="tag-pill">Shopping</span>
+      <span class="tag-pill">Food runs</span>
+      <span class="tag-pill">Weekend trips</span>
+      <span class="tag-pill">Exploring Hyderabad</span>
+    </div>
+    <a class="btn btn-navy wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals, I'm a student and I want to book a scooter. Please share availability and student pricing.">Book Your Ride</a>
+  </div>
+</section>
+
+<!-- ===== ABOUT ===== -->
+<section id="about">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-stat">
+        <div class="big">500+</div>
+        <div class="lbl">Students rented with us</div>
+      </div>
+      <div class="about-copy">
+        <span class="eyebrow">About Us</span>
+        <h2 style="margin:14px 0 20px; font-size:32px; font-weight:800;">About Maruthi Bike Rentals</h2>
+        <p class="lead">Maruthi Bike Rentals is a student-friendly scooter rental service based in Maisammaguda / Bahadurpally, Hyderabad.</p>
+        <p>Our goal is to make affordable and convenient two-wheeler rentals easily accessible to students and local customers.</p>
+        <p>We're building a rental service around affordability, convenience and a hassle-free booking experience.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section id="how">
+  <div class="wrap">
+    <div class="section-head center">
+      <span class="eyebrow">The Route</span>
+      <h2>How It Works</h2>
+      <p>Four stops between you and your next ride.</p>
+    </div>
+    <div class="route-wrap">
+      <div class="route-line"></div>
+      <div class="route-marker">
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="15" fill="#F4A81D"/><path d="M8 17l3-6h6l4 6h3" stroke="#0A1F3D" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+      </div>
+      <div class="route-steps">
+        <div class="route-step">
+          <div class="stop">01</div>
+          <h3>Choose Your Scooter</h3>
+          <p>Select your preferred scooter from our fleet.</p>
+        </div>
+        <div class="route-step">
+          <div class="stop">02</div>
+          <h3>Select Duration</h3>
+          <p>Choose the rental duration that suits your day.</p>
+        </div>
+        <div class="route-step">
+          <div class="stop">03</div>
+          <h3>WhatsApp Us</h3>
+          <p>Send your booking request to 7780208135.</p>
+        </div>
+        <div class="route-step">
+          <div class="stop">04</div>
+          <h3>Pick Up &amp; Ride</h3>
+          <p>Confirm your booking, collect your scooter and ride.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY US ===== -->
+<section>
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Why Us</span>
+      <h2>Why Maruthi Bike Rentals?</h2>
+    </div>
+    <div class="why-grid">
+      <div class="why-item"><span class="check">✓</span><p>Student-friendly prices</p></div>
+      <div class="why-item"><span class="check">✓</span><p>Easy WhatsApp booking</p></div>
+      <div class="why-item"><span class="check">✓</span><p>Convenient Maisammaguda location</p></div>
+      <div class="why-item"><span class="check">✓</span><p>Multiple scooter options</p></div>
+      <div class="why-item"><span class="check">✓</span><p>Flexible rental durations</p></div>
+      <div class="why-item"><span class="check">✓</span><p>Quick and simple booking process</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== LOCATION ===== -->
+<section class="location-section">
+  <div class="wrap">
+    <div class="location-grid">
+      <div class="location-copy">
+        <span class="eyebrow">Find Us</span>
+        <h2 style="margin-top:14px; font-size:32px; font-weight:800;">Find Us</h2>
+        <div class="addr">📍 Maisammaguda / Bahadurpally, Hyderabad, Telangana</div>
+        <div style="display:flex; gap:14px; flex-wrap:wrap;">
+          <a class="btn btn-gold" href="https://www.google.com/maps/search/?api=1&query=17.557500542014736,78.44010282682453" target="_blank" rel="noopener">Get Directions</a>
+          <a class="btn btn-outline" href="tel:7780208135">Call Now</a>
+        </div>
+      </div>
+      <div class="map-card">
+        <iframe
+          src="https://www.google.com/maps?q=17.557500542014736,78.44010282682453&output=embed"
+          width="100%"
+          height="320"
+          style="border:0; border-radius:22px; display:block;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <div class="contact-cta">
+    <h2>Ready To Ride?</h2>
+    <p>Book your scooter today and explore Hyderabad on your own terms.</p>
+    <div class="contact-ctas">
+      <a class="btn btn-whatsapp wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals! I would like to rent a scooter. Please share the available scooters and pricing.">WhatsApp Now</a>
+      <a class="btn btn-outline" href="tel:7780208135">Call Now</a>
+    </div>
+    <div class="contact-phone">📞 7780208135 &nbsp;·&nbsp; 📍 Maisammaguda / Bahadurpally</div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-logo">MARUTHI BIKE RENTALS</div>
+        <p class="footer-tag">Affordable rides. Easy booking. Your freedom.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Explore</h4>
+        <a href="#top">Home</a>
+        <a href="#scooters">Scooters</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About Us</a>
+        <a href="#how">How It Works</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="tel:7780208135">📞 7780208135</a>
+        <a href="#">📍 Maisammaguda / Bahadurpally, Hyderabad</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Maruthi Bike Rentals. All Rights Reserved.</span>
+      <span>Made for students, by students.</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ===== WHATSAPP FLOAT ===== -->
+<a class="wa-float wa-link" target="_blank" rel="noopener" data-msg="Hi Maruthi Bike Rentals! I would like to rent a scooter. Please share the available scooters and pricing.">
+  <span class="wa-tooltip">Book Your Scooter</span>
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.71.45 3.38 1.3 4.85L2 22l5.35-1.4a9.9 9.9 0 004.69 1.19h.01c5.46 0 9.9-4.45 9.9-9.91S17.5 2 12.04 2zm5.8 14.14c-.24.68-1.4 1.3-1.93 1.38-.5.08-1.13.11-1.83-.12a17 17 0 01-1.66-.62c-2.92-1.26-4.83-4.2-4.98-4.4-.15-.2-1.19-1.58-1.19-3.01s.74-2.13 1-2.43c.26-.29.57-.36.76-.36h.55c.18 0 .42-.07.65.5.24.58.82 1.99.89 2.13.07.15.12.32.02.52-.1.2-.15.32-.29.5-.15.17-.3.39-.44.52-.14.15-.29.31-.13.6.16.29.72 1.19 1.55 1.93 1.06.95 1.96 1.24 2.24 1.38.29.14.46.12.63-.07.17-.2.72-.84.92-1.13.2-.29.4-.24.66-.14.27.1 1.68.8 1.97.94.29.14.48.21.55.33.07.12.07.68-.17 1.36z"/></svg>
+</a>
+
+<script>
+  const WA_NUMBER = "917780208135";
+  document.querySelectorAll('.wa-link').forEach(el=>{
+    const msg = el.getAttribute('data-msg') || "Hi Maruthi Bike Rentals, I want to book a scooter.";
+    el.href = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(msg)}`;
+  });
+  document.getElementById('waTopBtn').href =
+    `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent("Hi Maruthi Bike Rentals, I want to book a scooter. Please share the available scooters and pricing.")}`;
+
+  const hamburger = document.getElementById('hamburgerBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', ()=>{
+    mobileMenu.classList.toggle('open');
+  });
+  mobileMenu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>mobileMenu.classList.remove('open')));
+</script>
+
+</body>
+</html>
